@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacation Destinations</title>
+
+    <!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <style type="text/css">
+    .row {
+      margin-top: 30px;
+    }
+
+    .trip {
+      font-weight: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-top: 8px;
+      font-size: 20px;
+      /*font-family: sans-serif;*/
+    }
+    #destination_details_form {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <!--  <div class="thumbnail"> -->
+          <!--  <a href="/w3images/lights.jpg" target="_blank"> -->
+          <img
+            class="image"
+            src="https://res.cloudinary.com/dojwmpykx/image/upload/v1644421856/2_p01zqf.jpg"
+            alt="Lights"
+            style="width: 100%;"
+          />
+          <div class="caption">
+            <p class="trip">Thousand Island Beach</p>
+          </div>
+          <!-- </a> -->
+          <!--  </div> -->
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://res.cloudinary.com/dojwmpykx/image/upload/v1644421866/3_z9rlu2.jpg"
+            alt="Nature"
+            style="width: 100%;"
+          />
+          <div class="caption">
+            <p class="trip">Ujung Gentang Sukabumi</p>
+          </div>
+          <!--  </a> -->
+          <!-- </div> -->
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://res.cloudinary.com/dojwmpykx/image/upload/v1644422372/6_ackhye.jpg"
+            alt="Fjords"
+            style="width: 100%;"
+          />
+          <div class="caption">
+            <p class="trip">Suarna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <h1>Enjoy the world most beautiful places</h1>
+      <p>
+        Find your exciting place and visit on your next vacation? Use the form
+        below to add them to the list
+      </p>
+    </header>
+
+    <main>
+      <form id="destination_details_form">
+        <label for="name">Destination name</label>
+        <input
+          required
+          type="text"
+          id="name"
+          placeholder="Enter the name of the destination"
+        />
+
+        <label for="location">Location</label>
+        <input
+          required
+          type="text"
+          id="location"
+          placeholder="Where is it located?"
+        />
+
+        <label for="photo">Photo</label>
+        <input
+          type="url"
+          id="photo"
+          placeholder="Enter an image url of the place"
+        />
+
+        <label for="description">Description</label>
+        <textarea
+          type="text"
+          id="description"
+          placeholder="Where is it located?"
+        ></textarea>
+
+        <button type="submit">Add to list</button>
+      </form>
+
+      <article>
+        <h2 id="title">Enter destination details</h2>
+        <div id="destinations_container"></div>
+      </article>
+    </main>
+
+    <!-- Our JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
